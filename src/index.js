@@ -111,9 +111,12 @@ class Game extends React.Component {
 			const text = move ?
 				`${user} at (${x},${y})` :
 				`Go to game start`
+
 			return (
 				<li key={move}>
-					<button onClick={() => this.jumpTo(move)}>{text}</button>
+					<button onClick={() => this.jumpTo(move)}>
+						{move === this.state.stepNumber ? <b>{text}</b> : text}
+					</button>
 				</li>
 			)
 		})
