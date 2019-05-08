@@ -1,3 +1,12 @@
+body {
+	font-family: "Helvetica", sans-serif;
+}
+.game {
+	flex-wrap: wrap;
+}
+h1 {
+	flex: 1 0 100%;
+}
 
 dy {
   font: 14px "Century Gothic", Futura, sans-serif;
@@ -19,22 +28,35 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
+  background: rgba(139, 211, 255, 0.52);
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 68px;
+  height: 68px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 68px;
 }
 
 .square:focus {
   outline: none;
+}
+
+button.square[value="X"] {
+	color: rebeccapurple;
+}
+button.square[value="O"] {
+	color: lightpink;
+}
+button.square[value="X"].dim {
+	color: rgba(102,51,153,0.5);
+}
+button.square[value="O"].dim {
+	color: rgba(255,182,193,0.5);
 }
 
 .kbd-navigation .square:focus {
@@ -50,4 +72,6 @@ ol, ul {
   margin-left: 20px;
 }
 
+.game img { opacity: 0 }
 
+.game.win img { opacity: 1 }
